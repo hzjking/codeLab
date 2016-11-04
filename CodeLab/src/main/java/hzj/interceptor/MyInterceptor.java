@@ -1,6 +1,6 @@
 package hzj.interceptor;
 
-import com.htaonet.service.UserService;
+import hzj.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;

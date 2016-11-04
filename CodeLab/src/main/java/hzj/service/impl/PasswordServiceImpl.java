@@ -21,19 +21,16 @@ import javax.annotation.PostConstruct;
 public class PasswordServiceImpl implements PasswordService {
 
 
-    @Autowired
-    private CacheManager ehcacheManager;
-
     private Cache loginRecordCache;
 
     //密码输错次数
     private int maxRetryCount = 5;
 
-    @PostConstruct
+   /* @PostConstruct
     public void init() {
         loginRecordCache = ehcacheManager.getCache("loginRecordCache");
     }
-
+*/
     @Override
     public void validate(User user, String password) {
         String username = user.getUsername();

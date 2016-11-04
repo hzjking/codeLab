@@ -1,7 +1,7 @@
 package hzj.page;
 
 
-import com.sand.vo.page.PaginationVO;
+import hzj.vo.page.PaginationVO;
 
 import java.util.ArrayList;
 import java.util.HashMap;

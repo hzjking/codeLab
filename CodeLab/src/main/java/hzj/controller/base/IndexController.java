@@ -26,7 +26,8 @@ public class IndexController extends BaseController{
 
     @RequestMapping("/")
     public String index(HttpServletRequest request, Model model) {
-        User user = (User)request.getAttribute(Constants.CURRENT_USER);
+ //       User user = (User)request.getAttribute(Constants.CURRENT_USER);
+        User user = userService.findByUsername("admin");
         List<Menu> menus = resourceService.findMenus(user);
         model.addAttribute("menus", menus);
         model.addAttribute("username",user.getUsername());

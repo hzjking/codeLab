@@ -2,10 +2,6 @@ package hzj.utils;
 
 
 import com.google.common.collect.Lists;
-import net.sourceforge.pinyin4j.PinyinHelper;
-import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
-import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
-import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -83,7 +79,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils{
     * @param name 汉字
     * @return 拼音
     */
-    public static String HanyuToPinyin(String name){
+   /* public static String HanyuToPinyin(String name){
     	String pinyinName = "";
         char[] nameChar = name.toCharArray();
         HanyuPinyinOutputFormat defaultFormat = new HanyuPinyinOutputFormat();
@@ -99,7 +95,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils{
             } 
         }
         return pinyinName;
-    }
+    }*/
     
     /**
      * 当前时间转换yyyyMMddHHmmss格式
@@ -756,12 +752,12 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils{
 	 * @param txt
 	 * @return
 	 */
-	public static String toHtml(String txt){
+	/*public static String toHtml(String txt){
 		if (txt == null){
 			return "";
 		}
 		return replace(replace(Encodes.escapeHtml(txt), "\n", "<br/>"), "\t", "&nbsp; &nbsp; ");
-	}
+	}*/
 
 	/**
 	 * 缩略字符串（不区分中英文字符）
@@ -893,12 +889,12 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils{
 	/**
 	 * 获得i18n字符串
 	 */
-	public static String getMessage(String code, Object[] args) {
+	/*public static String getMessage(String code, Object[] args) {
 		LocaleResolver localLocaleResolver = (LocaleResolver) SpringContextHolder.getBean(LocaleResolver.class);
 		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 		Locale localLocale = localLocaleResolver.resolveLocale(request);
 		return SpringContextHolder.getApplicationContext().getMessage(code, args, localLocale);
-	}
+	}*/
 
 	/**
 	 * 获得用户远程地址

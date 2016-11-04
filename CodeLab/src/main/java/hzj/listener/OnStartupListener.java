@@ -22,7 +22,7 @@ public class OnStartupListener implements ServletContextListener {
 		
 		// 加载环境变量
 		String prefix = ConfigPath.getConfigPath(ExtEntity.ENV_CONS.getValue()) + "/";
-		logger.info("misServer prefix path: "+prefix);
+		logger.info("Code-Lab prefix path: "+prefix);
 		
 		// 加载log4j.properties配置文件
 		logger.info("start load log4j.properties");

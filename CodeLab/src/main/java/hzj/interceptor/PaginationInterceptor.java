@@ -1,7 +1,7 @@
 package hzj.interceptor;
 
-import com.htaonet.page.Page;
-import com.htaonet.utils.ReflectionUtil;
+import hzj.page.Page;
+import hzj.utils.ReflectionUtil;
 import org.apache.ibatis.executor.parameter.ParameterHandler;
 import org.apache.ibatis.executor.statement.RoutingStatementHandler;
 import org.apache.ibatis.executor.statement.StatementHandler;

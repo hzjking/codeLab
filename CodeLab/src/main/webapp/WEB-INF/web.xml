@@ -62,5 +62,4 @@
     <listener-class>com.sand.listener.LoadConfigListener</listener-class>
   </listener>-->
 
-
 </web-app>

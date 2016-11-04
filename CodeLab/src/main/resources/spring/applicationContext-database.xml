@@ -13,32 +13,32 @@
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('driverClass')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('driverClass')}"></property>
 		<!--<property name="jdbcUrl" value="jdbc:mysql://192.168.32.152:3306/app_server?useUnicode=true&amp;characterEncoding=UTF8"></property>-->
 		<property name="jdbcUrl"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('jdbcUrl')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('jdbcUrl')}"></property>
 		<property name="user"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('user')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('user')}"></property>
 		<property name="password"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('password')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('password')}"></property>
 		<property name="autoCommitOnClose"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('autoCommitOnClose')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('autoCommitOnClose')}"></property>
 		<property name="acquireIncrement"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('acquireIncrement')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('acquireIncrement')}"></property>
 		<property name="initialPoolSize"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('initialPoolSize')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('initialPoolSize')}"></property>
 		<property name="minPoolSize"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('minPoolSize')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('minPoolSize')}"></property>
 		<property name="maxPoolSize"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('maxPoolSize')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('maxPoolSize')}"></property>
 		<property name="maxStatements"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('maxStatements')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('maxStatements')}"></property>
 		<property name="maxIdleTime"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('maxIdleTime')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('maxIdleTime')}"></property>
 		<property name="idleConnectionTestPeriod"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('idleConnectionTestPeriod')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('idleConnectionTestPeriod')}"></property>
 		<property name="numHelperThreads"
-			value="#{T(com.htaonet.properties.JDBCProperties).getValue('numHelperThreads')}"></property>
+			value="#{T(hzj.properties.JDBCProperties).getValue('numHelperThreads')}"></property>
 		<!--<property name="checkoutTimeout" value="100"></property>
 		<property name="acquireRetryAttempts" value="30"></property>-->
 	</bean>
@@ -58,7 +58,7 @@
 	</bean>
 
 	<!-- 分页 拦截器 -->
-	<bean id="paginationInterceptor" class="com.htaonet.interceptor.PaginationInterceptor">
+	<bean id="paginationInterceptor" class="hzj.interceptor.PaginationInterceptor">
 		<property name="databaseType" value="mysql"></property>
 	</bean>
 

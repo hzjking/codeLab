@@ -6,7 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="org.apache.shiro.web.filter.authc.FormAuthenticationFilter"%>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@include file="/WEB-INF/views/common/taglib.jsp"%>

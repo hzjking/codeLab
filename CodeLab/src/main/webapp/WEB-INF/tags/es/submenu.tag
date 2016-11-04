@@ -1,5 +1,5 @@
 <%@tag pageEncoding="UTF-8" description="构建子菜单" %>
-<%@ attribute name="menu" type="com.sand.pojo.Menu" required="true" description="当前菜单" %>
+<%@ attribute name="menu" type="hzj.pojo.Menu" required="true" description="当前菜单" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@taglib prefix="es" tagdir="/WEB-INF/tags/es" %>
