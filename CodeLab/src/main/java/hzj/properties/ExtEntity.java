@@ -9,7 +9,7 @@ public enum ExtEntity {
 	// 上下文配置
 	CONTEXT("context.properties"),
 	// 环境变量
-	ENV_CONS("FACTORING_HOME");
+	ENV_CONS("CODE_HOME");
 	
 	
 	private String value;
