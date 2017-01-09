@@ -2,8 +2,10 @@
 <link href="<%=request.getContextPath()%>/static/css/style.default.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/static/css/jquery.datatables.css" rel="stylesheet">
 <link href="<%=request.getContextPath()%>/static/css/jquery.tagsinput.css" rel="stylesheet">
+<link href="<%=request.getContextPath()%>/static/css/fileinput.css" rel="stylesheet">
 <script src="<%=request.getContextPath()%>/static/js/jquery-1.10.2.min.js"></script>
 <script src="<%=request.getContextPath()%>/static/js/jquery-ui-1.10.3.min.js"></script>
+<script src="<%=request.getContextPath()%>/static/js/fileinput.js"></script>
 <script src="<%=request.getContextPath()%>/static/js/jquery-migrate-1.2.1.min.js"></script>
 <script src="<%=request.getContextPath()%>/static/js/bootstrap-timepicker.min.js"></script>
 <script src="<%=request.getContextPath()%>/static/js/jquery.maskedinput.min.js"></script>
