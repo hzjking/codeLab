@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page isELIgnored="false"%>
 <%@include file="/WEB-INF/views/common/taglib.jsp"%>
 <html>
 <head>
@@ -49,7 +50,7 @@
             
             <div class="col-md-5">
                 
-                <form method="post" action="<%=request.getContextPath()%>/user/login">
+                <%--<form method="post" action="<%=request.getContextPath()%>/user/login">
                     <h4 class="nomargin">登录</h4>
                     <p class="mt5 mb20">${error}</p>
 
@@ -59,7 +60,32 @@
                     <a href="#"><small>忘记密码?</small></a>
                     <button class="btn btn-success btn-block">登录</button>
                     
-                </form>
+                </form>--%>
+                    <c:url var="loginUrl" value="<%=request.getContextPath()%>/user/login" />
+                    <form method="post" action="${loginUrl}">
+                        <c:if test="${param.error != null}">
+                            <div class="alert alert-danger">
+                                <p>Invalid username and password.</p>
+                            </div>
+                        </c:if>
+                        <c:if test="${param.logout != null}">
+                            <div class="alert alert-success">
+                                <p>You have been logged out successfully.</p>
+                            </div>
+                        </c:if>
+
+                        <h4 class="nomargin">登录</h4>
+                        <p class="mt5 mb20">${error}</p>
+
+                        <input type="text" class="form-control uname" placeholder="用户名"
+                               id="username" name="ssoId"/>
+                        <input type="password" class="form-control pword" placeholder="密码" id="password" name="password"/>
+                        <a href="#"><small>忘记密码?</small></a>
+                        <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
+                        <button class="btn btn-success btn-block">登录</button>
+
+                    </form>
+
             </div><!-- col-sm-5 -->
             
         </div><!-- row -->

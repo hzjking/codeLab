@@ -27,15 +27,17 @@
             <div class="col-md-7">
                 
                 <div class="signin-info">
-                    <div class="logopanel">
+                    Dear <strong>${user}</strong>, Welcome to Home Page.
+                    <a href="<c:url value="/logout" />">Logout</a>
+                <%-- <div class="logopanel">
                         <h1><span>[</span> 首页 <span>]</span></h1>
                     </div><!-- logopanel -->
                 
                     <div class="mb20"></div>
                 
-                    <h5><strong>欢迎访问保理管理平台!</strong></h5>
+                    <h5><strong>欢迎访问管理平台!</strong></h5>
 
-                    <div class="mb20"></div>
+                    <div class="mb20"></div>--%>
                 </div><!-- signin0-info -->
             
             </div><!-- col-sm-7 -->
