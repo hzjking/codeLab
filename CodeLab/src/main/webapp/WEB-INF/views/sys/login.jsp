@@ -61,8 +61,8 @@
                     <button class="btn btn-success btn-block">登录</button>
                     
                 </form>--%>
-                    <c:url var="loginUrl" value="<%=request.getContextPath()%>/user/login" />
-                    <form method="post" action="${loginUrl}">
+                    <c:url var="loginUrl" value="/user/login" />
+                    <form method="post" action="<%=request.getContextPath()%>${loginUrl}">
                         <c:if test="${param.error != null}">
                             <div class="alert alert-danger">
                                 <p>Invalid username and password.</p>

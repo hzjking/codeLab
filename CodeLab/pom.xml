@@ -12,6 +12,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!--<spring.version>4.0.8.RELEASE</spring.version>-->
     <spring.version>4.2.4.RELEASE</spring.version>
+    <springsecurity.version>4.0.1.RELEASE</springsecurity.version>
     <fastjson.version>1.2.11</fastjson.version>
     <mybatis.version>3.2.2</mybatis.version>
     <mybatis.spring.version>1.2.0</mybatis.spring.version>
@@ -262,7 +263,7 @@
     </dependency>
 
     <!-- jcaptcha 验证码 -->
-    <dependency>
+    <!--<dependency>
       <groupId>com.octo.captcha</groupId>
       <artifactId>jcaptcha-api</artifactId>
       <version>${jcaptcha.version}</version>
@@ -282,7 +283,7 @@
           <groupId>javax.servlet</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
+    </dependency>-->
 
 
     <dependency>
@@ -338,26 +339,22 @@
       <artifactId>poi</artifactId>
       <version>3.14</version>
     </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.6</version>
-      <scope>test</scope>
-    </dependency>
+
+    <!--spring security-->
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-web</artifactId>
-      <version>4.1.2.RELEASE</version>
+      <version>${springsecurity.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-config</artifactId>
-      <version>4.1.2.RELEASE</version>
+      <version>${springsecurity.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-taglibs</artifactId>
-      <version>4.1.2.RELEASE</version>
+      <version>${springsecurity.version}</version>
     </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -368,6 +365,11 @@
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>javax.servlet.jsp-api</artifactId>
       <version>2.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
     </dependency>
 
   </dependencies>
