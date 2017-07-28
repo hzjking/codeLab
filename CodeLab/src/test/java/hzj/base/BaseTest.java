@@ -1,13 +1,16 @@
 package hzj.base;
 
 
-import hzj.utils.Md5Utils;
+
+import hzj.utils.HttpUtil;
+import hzj.utils.MD5Util;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * Created by MichaelHe on 2017/7/28.
@@ -34,6 +37,7 @@ public abstract class BaseTest {
 
 
     public String packJsonReqParams(){
+        UUID clientUUID = UUID.randomUUID();
         Map<String, String> headers = new HashMap<String, String>();
         Map<String, Object> jsonMap = new HashMap<String, Object>();
         Map<String, Object> jsonHead = new HashMap<String, Object>();
@@ -44,14 +48,14 @@ public abstract class BaseTest {
         headers.put(HUUID,uuid);
         Map<String, Object> jsonBody = new HashMap<String, Object>();
         jsonBody.put("username","13901620812");
-        /*jsonBody.put("password", Md5Utils.md5(Md5Utils.md5("a111111") + clientUuid));
-        jsonBody.put("uuid",clientUuid.toString());
-        jsonBody.put("versionId",versionId);
-        jsonBody.put("versionType",versionType);*/
+        jsonBody.put("password", MD5Util.sign(MD5Util.sign("a111111") + clientUUID));
+        jsonBody.put("uuid",clientUUID.toString());
+        jsonBody.put("versionId","1.0");
+        jsonBody.put("versionType","android");
         jsonMap.put("head",jsonHead);
         jsonMap.put("body",jsonBody);
 
-
+     //   String resp = HttpUtil.httpMethodPost();
         return null;
     }
 
