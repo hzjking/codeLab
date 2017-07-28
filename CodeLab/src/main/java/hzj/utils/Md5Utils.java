@@ -10,7 +10,7 @@ public class Md5Utils {
     private static final Logger LOGGER = LoggerFactory.getLogger(Md5Utils.class);
 
 
-    private static byte[] md5(String s) {
+    public static byte[] md5(String s) {
         MessageDigest algorithm;
         try {
             algorithm = MessageDigest.getInstance("MD5");
@@ -24,7 +24,7 @@ public class Md5Utils {
         return null;
     }
 
-    private static final String toHex(byte hash[]) {
+    public static final String toHex(byte hash[]) {
         if (hash == null) {
             return null;
         }
