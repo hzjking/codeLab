@@ -233,6 +233,10 @@ public class UserServiceImpl implements UserService {
         return sysUser;
     }
 
+    @Override
+    public boolean checkTokenByAccount(Integer userid, String token, String uuid) throws ErrCodeException {
+        return false;
+    }
 
 
     @Override

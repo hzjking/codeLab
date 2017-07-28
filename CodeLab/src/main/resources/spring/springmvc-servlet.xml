@@ -91,20 +91,6 @@
 	<!-- 控制器异常处理 -->
 	<bean id="exceptionHandlerExceptionResolver" class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
 	</bean>
-	<!--<bean class="hzj.exception.DefaultExceptionHandler"/>-->
-	<!-- 支持Shiro对Controller的方法级AOP安全控制 begin-->
-	<!--<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
-		<property name="proxyTargetClass" value="true" />
-	</bean>
 
-	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-		<property name="exceptionMappings">
-			<props>
-				<prop key="org.apache.shiro.authz.UnauthorizedException">error/403</prop>
-				<prop key="java.lang.Throwable">error/500</prop>
-			</props>
-		</property>
-	</bean>-->
-	<!-- 支持Shiro对Controller的方法级AOP安全控制 end -->
 
 </beans>  

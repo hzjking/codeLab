@@ -1,5 +1,6 @@
 package hzj.interceptor;
 
+import hzj.respCode.RespCode;
 import hzj.service.UserService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class MyInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request,
 							 HttpServletResponse response, Object handler) throws Exception {
 
-		/*int userid = Integer.parseInt(request.getHeader("huserid"));
+		int userid = Integer.parseInt(request.getHeader("huserid"));
 		String token = request.getHeader("htoken");
 		String uuid = request.getHeader("huuid");
 
@@ -37,7 +38,7 @@ public class MyInterceptor implements HandlerInterceptor {
 				|| token == null
 				|| "".equals(token)
 				|| !userService.checkTokenByAccount(userid, token, uuid)) {
-			*//*logger.warn("invalid request uri：" + request.getRequestURI());*//*
+			//*logger.warn("invalid request uri：" + request.getRequestURI());*//
 			StringBuffer result = new StringBuffer();
 			result.append("{\"resultCode\":\"").append(RespCode.SESSION_INVALID)
 					.append("\",\"resultMsg\":\"").append(RespCode.getCodeDesc(RespCode.SESSION_INVALID))
@@ -46,7 +47,7 @@ public class MyInterceptor implements HandlerInterceptor {
 			response.getOutputStream().write(
 					result.toString().getBytes("UTF-8"));
 			return false;
-		}*/
+		}
 
 		return true;
 	}

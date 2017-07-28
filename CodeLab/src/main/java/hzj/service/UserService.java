@@ -3,6 +3,7 @@ package hzj.service;
 
 
 import hzj.dao.po.SysUser;
+import hzj.exception.ErrCodeException;
 import hzj.page.PageDataDTO;
 import hzj.pojo.User;
 import hzj.query.UserQueryDTO;
@@ -73,6 +74,9 @@ public interface UserService {
      * @return
      */
     //public Set<String> findPermissions(String username);
+
+    public boolean checkTokenByAccount(Integer userid, String token, String uuid) throws ErrCodeException;
+
 
 
 }
