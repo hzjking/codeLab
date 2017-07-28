@@ -2,6 +2,7 @@ package hzj.interceptor;
 
 import hzj.respCode.RespCode;
 import hzj.service.UserService;
+import hzj.utils.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -25,8 +26,10 @@ public class MyInterceptor implements HandlerInterceptor {
 	 */
 	public boolean preHandle(HttpServletRequest request,
 							 HttpServletResponse response, Object handler) throws Exception {
-
-		int userid = Integer.parseInt(request.getHeader("huserid"));
+		int userid = 0;
+		if(StringUtils.isNotBlank(request.getHeader("huserid"))){
+			userid = Integer.parseInt(request.getHeader("huserid"));
+		}
 		String token = request.getHeader("htoken");
 		String uuid = request.getHeader("huuid");
 

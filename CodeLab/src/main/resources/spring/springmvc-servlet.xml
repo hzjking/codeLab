@@ -83,7 +83,8 @@
 			<!--设置拦截的路径 -->
 			<mvc:mapping path="/**" />
 			<mvc:exclude-mapping path="/static/**"/>
-			<mvc:exclude-mapping path="/user/login/**"/>
+            <mvc:exclude-mapping path="/user/login/**"/>
+			<mvc:exclude-mapping path="/login/**"/>
 
 			<bean class="hzj.interceptor.MyInterceptor"></bean>
 		</mvc:interceptor>
