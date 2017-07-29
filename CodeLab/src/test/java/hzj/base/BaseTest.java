@@ -2,6 +2,7 @@ package hzj.base;
 
 
 
+import com.alibaba.fastjson.JSONObject;
 import hzj.utils.HttpUtil;
 import hzj.utils.MD5Util;
 
@@ -28,7 +29,7 @@ public abstract class BaseTest {
 
     public void settingToken(){
 
-
+        String result  = packJsonReqParams("http://localhost:7001/");
 
     }
 
@@ -36,7 +37,7 @@ public abstract class BaseTest {
     protected abstract void setUserId();
 
 
-    public String packJsonReqParams(){
+    public String packJsonReqParams(String url){
         UUID clientUUID = UUID.randomUUID();
         Map<String, String> headers = new HashMap<String, String>();
         Map<String, Object> jsonMap = new HashMap<String, Object>();
@@ -55,7 +56,9 @@ public abstract class BaseTest {
         jsonMap.put("head",jsonHead);
         jsonMap.put("body",jsonBody);
 
-     //   String resp = HttpUtil.httpMethodPost();
+        String resp = HttpUtil.httpMethodPost(url,JSONObject.toJSONString(jsonMap),headers,"UTF-8");
+
+
         return null;
     }
 

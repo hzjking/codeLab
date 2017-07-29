@@ -82,7 +82,7 @@ public class HttpUtil {
 	 * 
 	 * HTTP协议POST请求方法
 	 */
-	public static String httpMethodPost(String url, String params, String gb) {
+	public static String httpMethodPost(String url, String params,Map<String, String> headers, String gb) {
 		if (null == gb || "".equals(gb)) {
 			gb = "UTF-8";
 		}
@@ -99,6 +99,11 @@ public class HttpUtil {
 			uc.setUseCaches(false);
 			uc.setRequestProperty("Content-Type",
 					"application/x-www-form-urlencoded");
+			if(headers.size()>0){
+				for (String key : headers.keySet()) {
+					uc.setRequestProperty(key,headers.get(key));
+				}
+			}
 			uc.connect();
 			DataOutputStream out = new DataOutputStream(uc.getOutputStream());
 			out.write(params.getBytes(gb));
